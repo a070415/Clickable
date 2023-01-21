@@ -5,7 +5,7 @@
     android:padding="10dp"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="@drawable/dialog_backgroud"
+    android:background="@drawable/dialog_background"
     android:orientation="vertical">
 
     <TextView
@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:textSize="25dp"
-        android:fontFamily="@font/kyobo"
         android:gravity="center_horizontal"
         android:text="score" />
 
@@ -36,7 +35,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16dp"
-            android:fontFamily="@font/kyobo"
             android:backgroundTint="@color/main_color"
             android:textColor="@color/white"
             android:text="다시하기" />

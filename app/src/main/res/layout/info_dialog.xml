@@ -5,7 +5,7 @@
     android:padding="10dp"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="@drawable/dialog_backgroud"
+    android:background="@drawable/dialog_background"
     android:orientation="vertical">
 
     <TextView
@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:textSize="20dp"
-        android:fontFamily="@font/kyobo"
         android:gravity="center_horizontal"
         android:text="@string/info_dialog" />
 
@@ -35,7 +34,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16dp"
-            android:fontFamily="@font/kyobo"
             android:backgroundTint="@color/main_color"
             android:textColor="@color/white"
             android:text="확인" />

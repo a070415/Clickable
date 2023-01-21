@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:text="@string/main_title"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/kyobo"
         android:gravity="center"
         android:textSize="60sp"
         android:layout_marginBottom="20dp"/>
@@ -34,7 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_start"
-        android:fontFamily="@font/kyobo"
         android:layout_marginBottom="20dp"
         android:layout_gravity="bottom"
         android:backgroundTint="@color/main_color"
