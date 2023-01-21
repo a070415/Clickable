@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.clickable'
+    namespace 'com.tabtab.clickable'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.clickable"
+        applicationId "com.tabtab.clickable"
         minSdk 21
         targetSdk 33
         versionCode 1
