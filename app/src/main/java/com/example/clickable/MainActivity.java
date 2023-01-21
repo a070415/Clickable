@@ -10,10 +10,12 @@ import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Dialog mInfoDialog;
+    private long backpressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +35,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void gotoActivity(Intent intent) {
-        if(intent == null) {
+        if (intent == null) {
             return;
         } else {
             startActivity(intent);
+            finish();
         }
     }
 
@@ -50,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
         Window window = mInfoDialog.getWindow();
 
-        int x = (int)(size.x * 0.7f);
-        int y = (int)(size.y * 0.2f);
+        int x = (int) (size.x * 0.7f);
+        int y = (int) (size.y * 0.2f);
 
-        window.setLayout(x,y);
+        window.setLayout(x, y);
 
         // ok 버튼을 눌렀을때
         Button mBtnDialogOk = mInfoDialog.findViewById(R.id.btn_dialog_ok);
@@ -64,5 +67,16 @@ public class MainActivity extends AppCompatActivity {
                 gotoActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (System.currentTimeMillis() > backpressedTime + 2000) {
+            backpressedTime = System.currentTimeMillis();
+            Toast.makeText(this, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() <= backpressedTime + 2000) {
+            finish();
+        }
     }
 }
