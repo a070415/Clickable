@@ -1,5 +1,6 @@
 package com.example.clickable;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -17,11 +18,19 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class ClickActivity extends AppCompatActivity {
 
     private TextView mtvTimer, mtvCount;
     private LinearLayout mllTabArea;
     private long backpressedTime = 0;
+    private AdView mAdView;
 
     // 다이얼로그 부분
     private Dialog dialog;
@@ -36,10 +45,23 @@ public class ClickActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_click);
 
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        mAdView = new AdView(this);
+        mAdView.setAdSize(AdSize.BANNER);
+        mAdView.setAdUnitId("ca-app-pub-2604303771066079~9458324096");
+
         mtvTimer = (TextView) findViewById(R.id.tv_timer);
         mtvCount = (TextView) findViewById(R.id.tv_count);
 //        mDialogScore = (TextView) findViewById(R.id.dialog_score);
-
 
         mllTabArea = (LinearLayout) findViewById(R.id.tab_area);
 
@@ -90,10 +112,12 @@ public class ClickActivity extends AppCompatActivity {
 
     public void showDialog() {
         TextView test = dialog.findViewById(R.id.dialog_score);
+        Button mBtnRetry = dialog.findViewById(R.id.btn_retry);
         test.setText("스코어: " + count);
 
         dialog.show();
         dialog.setCancelable(false); //  다이얼로그 외부 터치 금지
+        mBtnRetry.setClickable(false); // 다시하기버튼 바로 클릭 금지
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -116,15 +140,20 @@ public class ClickActivity extends AppCompatActivity {
 //        });
 
         // yes 버튼을 눌렀을때
-        Button mBtnRetry = dialog.findViewById(R.id.btn_retry);
-        mBtnRetry.setOnClickListener(new View.OnClickListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ClickActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+            public void run() {
+                mBtnRetry.setClickable(true);
+                mBtnRetry.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(ClickActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
             }
-        });
+        },1000);
     }
 
     @Override

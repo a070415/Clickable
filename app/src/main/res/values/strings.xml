@@ -3,8 +3,13 @@
 
     <!--    메인화면-->
     <string name="btn_start">start</string>
-    <string name="main_title">Tab Tab</string>
+    <string name="main_title">Tab Tab!</string>
 
     <!--    다이얼로그-->
-    <string name="info_dialog">10초안에 최대한 많은 클릭에 도전하세요!</string>
+    <string name="info_dialog">10초안에 최대한 많은 클릭에 \n도전하세요!</string>
+
+    <!--    Google admob-->
+    <string name="admob_app_id">ca-app-pub-2604303771066079~9458324096</string>
+    <string name="banner_ad_unit_id">ca-app-pub-2604303771066079/4290909270</string>
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

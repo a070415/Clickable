@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="@string/main_title"
         android:gravity="center_horizontal"
-        android:textSize="40dp"
+        android:textSize="20sp"
         android:layout_marginBottom="20dp"/>
 
     <Button
@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_start"
+        android:layout_gravity="bottom"
         android:backgroundTint="#FFEB3B"
         android:textColor="@color/black"
         android:padding="20dp"/>
