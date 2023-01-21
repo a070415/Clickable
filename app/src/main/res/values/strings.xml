@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Clickable</string>
+    <string name="app_name">Tab Tab!</string>
 
     <!--    메인화면-->
     <string name="btn_start">start</string>
