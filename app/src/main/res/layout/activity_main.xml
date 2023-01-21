@@ -3,25 +3,42 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
+    android:background="#FAF8F1"
     android:orientation="vertical"
+    android:weightSum="3"
     android:gravity="center">
+
+    <TextView
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_title"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/kyobo"
+        android:gravity="center"
+        android:textSize="60sp"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/main_title"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/kyobo"
+        android:gravity="center"
+        android:text="@string/main_sub_title"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_start"
+        android:fontFamily="@font/kyobo"
+        android:layout_marginBottom="20dp"
         android:layout_gravity="bottom"
-        android:backgroundTint="#FFEB3B"
-        android:textColor="@color/black"
+        android:backgroundTint="@color/main_color"
+        android:textColor="@color/white"
         android:padding="20dp"/>
 
 </LinearLayout>

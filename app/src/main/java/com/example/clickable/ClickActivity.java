@@ -113,7 +113,7 @@ public class ClickActivity extends AppCompatActivity {
     public void showDialog() {
         TextView test = dialog.findViewById(R.id.dialog_score);
         Button mBtnRetry = dialog.findViewById(R.id.btn_retry);
-        test.setText("스코어: " + count);
+        test.setText("점수: " + count);
 
         dialog.show();
         dialog.setCancelable(false); //  다이얼로그 외부 터치 금지

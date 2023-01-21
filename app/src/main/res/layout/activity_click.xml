@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAF8F1"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,6 +17,7 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:gravity="right"
+            android:fontFamily="@font/kyobo"
             android:text="Time: "/>
 
 
@@ -24,6 +26,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="3dp"
             android:textSize="20dp"
+            android:fontFamily="@font/kyobo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="--"/>
@@ -48,6 +51,8 @@
         <TextView
             android:id="@+id/tv_count"
             android:gravity="center"
+            android:fontFamily="@font/kyobo"
+            android:textSize="30dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="--"/>

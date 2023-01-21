@@ -3,7 +3,8 @@
 
     <!--    메인화면-->
     <string name="btn_start">start</string>
-    <string name="main_title">Tab Tab!</string>
+    <string name="main_title">Tab Tab</string>
+    <string name="main_sub_title">아래의 버튼을 눌러 기록을 세워보세요</string>
 
     <!--    다이얼로그-->
     <string name="info_dialog">10초안에 최대한 많은 클릭에 \n도전하세요!</string>
