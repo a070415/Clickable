@@ -10,8 +10,8 @@ android {
         applicationId "com.tabtab.clickable"
         minSdk 21
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -39,4 +39,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     // 광고
     implementation 'com.google.android.gms:play-services-ads:21.4.0'
+    // 인앱결제
+    implementation 'com.android.billingclient:billing:5.1.0'
 }
