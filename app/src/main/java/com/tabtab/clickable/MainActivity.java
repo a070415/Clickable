@@ -10,6 +10,7 @@ import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.tabtab.clickable.R;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         window.setLayout(x, y);
 
         // ok 버튼을 눌렀을때
-        Button mBtnDialogOk = mInfoDialog.findViewById(R.id.btn_dialog_ok);
+        LinearLayout mBtnDialogOk = mInfoDialog.findViewById(R.id.btn_dialog_ok);
         mBtnDialogOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

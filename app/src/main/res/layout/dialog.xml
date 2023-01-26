@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/btn_retry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -34,15 +35,15 @@
             <!--            android:layout_marginRight="5dp"-->
             <!--            android:text="" />-->
 
-            <Button
-                android:id="@+id/btn_retry"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="16dp"
-                android:backgroundTint="@color/main_color"
-                android:textColor="@color/white"
-                android:text="다시하기" />
+<!--            <Button-->
+<!--                android:id="@+id/btn_retry"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:textSize="16dp"-->
+<!--                android:backgroundTint="@color/main_color"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="다시하기" />-->
         </LinearLayout>
 
 

@@ -7,7 +7,7 @@
     <string name="main_sub_title">아래의 버튼을 눌러 기록을 세워보세요</string>
 
     <!--    다이얼로그-->
-    <string name="info_dialog">10초안에 최대한 많은 클릭에 \n도전하세요!</string>
+    <string name="info_dialog">10초안에 최대한 많은 클릭에\n도전하세요!</string>
 
     <!--    Google admob-->
     <string name="admob_app_id">ca-app-pub-2604303771066079~9458324096</string>

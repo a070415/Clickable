@@ -113,7 +113,7 @@ public class ClickActivity extends AppCompatActivity {
 
     public void showDialog() {
         TextView test = dialog.findViewById(R.id.dialog_score);
-        Button mBtnRetry = dialog.findViewById(R.id.btn_retry);
+        LinearLayout mBtnRetry = dialog.findViewById(R.id.btn_retry);
         test.setText("점수: " + count);
 
         dialog.show();
